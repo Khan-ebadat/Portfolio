@@ -70,14 +70,14 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
+            {/* <a
               href="/resume.pdf"
               className="btn btn-primary btn-sm"
               download
             >
               Resume
             </a>
-            <ThemeToggle />
+            <ThemeToggle /> */}
           </div>
 
           {/* Mobile menu button */}
@@ -117,13 +117,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
+            {/* <a
               href="/resume.pdf"
               className="btn btn-primary w-full mt-4"
               download
             >
               Resume
-            </a>
+            </a> */}
           </div>
           <div className="mt-auto pt-8 border-t border-border">
             <div className="flex space-x-4 justify-center">

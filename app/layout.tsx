@@ -8,7 +8,8 @@ import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'John Doe | Frontend Developer',
+  title: 'Ebadat Khan | Full-Stack Developer',
+
   description: 'Portfolio website showcasing my projects and skills as a frontend developer',
   keywords: ['frontend', 'developer', 'portfolio', 'react', 'next.js', 'three.js'],
   authors: [{ name: 'John Doe' }],

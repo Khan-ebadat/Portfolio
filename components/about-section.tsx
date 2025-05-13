@@ -47,7 +47,7 @@ export default function AboutSection() {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="relative h-80 w-80 mx-auto lg:mx-0 overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg"
+                src="/khan.jpeg"
                 alt="John Doe"
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
@@ -71,10 +71,10 @@ export default function AboutSection() {
 
 
               <div className="flex flex-wrap gap-3 mt-6">
-                <a href="/resume.pdf" download className="btn btn-primary">
+                {/* <a href="/resume.pdf" download className="btn btn-primary">
                   Download CV
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                </a> */}
+                <a href="https://github.com/Khan-ebadat" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   GitHub Profile
                 </a>
               </div>
