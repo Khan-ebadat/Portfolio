@@ -113,9 +113,10 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Education</h3>
-                <p className="text-muted-foreground">B.S. Computer Science</p>
-                <p className="text-sm text-muted-foreground">Stanford University, 2018</p>
+                <p className="text-muted-foreground">B.Sc. Information Technology (3rd Year)</p>
+                <p className="text-sm text-muted-foreground">University of Mumbai, 2022 – Present</p>
               </div>
+
 
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Experience</h3>
@@ -129,7 +130,7 @@ export default function AboutSection() {
                 <p className="text-muted-foreground">40+ Completed</p>
                 <p className="text-sm text-muted-foreground">Web & Mobile Apps</p>
               </div> */}
-{/* 
+              {/* 
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Clients</h3>
                 <p className="text-muted-foreground">25+ Happy</p>
