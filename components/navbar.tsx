@@ -54,7 +54,7 @@ export default function Navbar() {
               className="text-2xl font-bold text-primary transition-colors hover:text-primary/80"
             >
               <span className="mr-1">{'{'}</span>
-              <span>JD</span>
+              <span>EK</span>
               <span className="ml-1">{'}'}</span>
             </Link>
           </div>

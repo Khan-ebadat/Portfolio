@@ -29,7 +29,7 @@ export default function HeroSection() {
     <div className="relative h-screen overflow-hidden" ref={containerRef}>
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-background/70 dark:from-background dark:to-background/70 z-10" />
-      
+
       {/* 3D Canvas as background */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
@@ -45,31 +45,31 @@ export default function HeroSection() {
           <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
         </Canvas>
       </div>
-      
+
       {/* Content */}
       <div className="container relative z-20 mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-3xl">
-          <motion.h1 
+          <motion.h1
             className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-primary">Hello, I&apos;m John Doe</span>
+            <span className="text-primary">Hello, I&apos;m Ebadat Khan</span>
             <br />
-            <span className="mt-2 block">Frontend Developer</span>
+            <span className="mt-2 block">Full-Stack Developer</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I build exceptional and accessible digital experiences for the web. Specialized in building modern, responsive web applications with React, Next.js, and Three.js.
+            I build exceptional and accessible digital experiences from front-end to back-end. Specialized in developing modern, responsive web applications using React, Next.js, Node.js, and MongoDB.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="mt-10 flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,16 +83,16 @@ export default function HeroSection() {
             </a>
           </motion.div>
         </div>
-        
+
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <button 
-            onClick={handleScrollDown} 
+          <button
+            onClick={handleScrollDown}
             className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
             aria-label="Scroll down"
           >
@@ -101,7 +101,7 @@ export default function HeroSection() {
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6" /></svg>
             </motion.div>
           </button>
         </motion.div>

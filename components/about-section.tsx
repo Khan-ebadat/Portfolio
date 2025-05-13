@@ -5,20 +5,20 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 
 const skills = [
-  { name: 'JavaScript', level: 90 },
+  { name: 'JavaScript', level: 80 },
   { name: 'React', level: 85 },
   { name: 'Next.js', level: 80 },
-  { name: 'TypeScript', level: 75 },
+  // { name: 'TypeScript', level: 75 },
   { name: 'Three.js', level: 70 },
   { name: 'CSS/Tailwind', level: 90 },
   { name: 'Node.js', level: 70 },
-  { name: 'Git/GitHub', level: 85 },
+  { name: 'Git/GitHub', level: 80 },
 ];
 
 export default function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +28,7 @@ export default function AboutSection() {
       },
     },
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -56,19 +56,20 @@ export default function AboutSection() {
                 priority
               />
             </div>
-            
+
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">About Me</h2>
               <p className="text-muted-foreground">
-                Hello! I'm John, a frontend developer based in San Francisco with a passion for building exceptional digital experiences.
+                Hello! I'm Ebadat, a full-stack developer based in Mumbai with a passion for building modern and accessible digital experiences.
               </p>
               <p className="text-muted-foreground">
-                With 5+ years of experience in web development, I enjoy creating elegant solutions to complex problems. My expertise includes React, TypeScript, and Three.js, allowing me to build both functional and visually appealing applications.
+                As a recent entrant into the world of web development, I’ve built a strong foundation in both front-end and back-end technologies. My skills include React, Next.js, Node.js, and MongoDB, and I enjoy creating responsive, user-friendly applications that solve real-world problems.
               </p>
               <p className="text-muted-foreground">
-                When I'm not coding, you'll find me exploring new hiking trails, experimenting with photography, or contributing to open-source projects.
+                When I'm not coding, I love exploring new hiking trails, experimenting with photography, or contributing to open-source projects to keep learning and growing.
               </p>
-              
+
+
               <div className="flex flex-wrap gap-3 mt-6">
                 <a href="/resume.pdf" download className="btn btn-primary">
                   Download CV
@@ -79,11 +80,11 @@ export default function AboutSection() {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Right column - Skills */}
           <motion.div variants={itemVariants} className="space-y-8">
             <h2 className="text-3xl font-bold">Skills & Expertise</h2>
-            
+
             <div className="space-y-5">
               {skills.map((skill, index) => (
                 <motion.div
@@ -108,31 +109,32 @@ export default function AboutSection() {
                 </motion.div>
               ))}
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Education</h3>
                 <p className="text-muted-foreground">B.S. Computer Science</p>
                 <p className="text-sm text-muted-foreground">Stanford University, 2018</p>
               </div>
-              
+
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Experience</h3>
-                <p className="text-muted-foreground">5+ Years</p>
-                <p className="text-sm text-muted-foreground">Frontend Development</p>
+                <p className="text-muted-foreground">Project-Based</p>
+                <p className="text-sm text-muted-foreground">Full-Stack Web Development</p>
               </div>
-              
-              <div className="card bg-background p-4 shadow-sm">
+
+
+              {/* <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Projects</h3>
                 <p className="text-muted-foreground">40+ Completed</p>
                 <p className="text-sm text-muted-foreground">Web & Mobile Apps</p>
-              </div>
-              
+              </div> */}
+{/* 
               <div className="card bg-background p-4 shadow-sm">
                 <h3 className="text-xl font-semibold mb-2">Clients</h3>
                 <p className="text-muted-foreground">25+ Happy</p>
                 <p className="text-sm text-muted-foreground">Global Clients</p>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </motion.div>
