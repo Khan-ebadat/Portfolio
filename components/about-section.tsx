@@ -48,7 +48,7 @@ export default function AboutSection() {
             <div className="relative h-80 w-80 mx-auto lg:mx-0 overflow-hidden rounded-2xl shadow-xl">
               <Image
                 src="/khan.jpeg"
-                alt="John Doe"
+                alt="Ebadat Khan"
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
                 style={{ objectFit: 'cover' }}
