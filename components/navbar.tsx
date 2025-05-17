@@ -17,6 +17,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
+  // Effect for scroll detection
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -29,6 +30,34 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Effect for body scroll lock
+  useEffect(() => {
+    // Lock/unlock body scroll when menu is opened/closed
+    if (isOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+    } else {
+      // Restore scroll position when closing menu
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
+      }
+    }
+    
+    return () => {
+      // Cleanup in case component unmounts while menu is open
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+    }
+  }, [isOpen])
 
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -76,8 +105,8 @@ export default function Navbar() {
               download
             >
               Resume
-            </a>
-            <ThemeToggle /> */}
+            </a>*/}
+            <ThemeToggle /> 
           </div>
 
           {/* Mobile menu button */}
@@ -103,8 +132,18 @@ export default function Navbar() {
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
         transition={{ duration: 0.2 }}
-        className="fixed inset-y-0 right-0 w-full bg-background/95 backdrop-blur-md md:hidden"
+        className={`fixed inset-y-0 right-0 w-full bg-background/95 backdrop-blur-md md:hidden overflow-y-auto z-40 ${
+          isOpen ? 'block' : 'hidden'
+        }`}
       >
+        {/* Close button in top right corner */}
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 right-4 p-2 text-foreground/80 hover:text-primary transition-colors"
+          aria-label="Close menu"
+        >
+          <X className="h-8 w-8" />
+        </button>
         <div className="pt-20 pb-6 px-6 flex flex-col h-full">
           <div className="flex flex-col space-y-6">
             {navLinks.map((link) => (
